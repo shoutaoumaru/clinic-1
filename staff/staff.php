@@ -1,23 +1,27 @@
+<?php
+ /* Template Name: staff
+ */
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>診療について | 医院テンプレート1</title>
-  <link rel="stylesheet" href="../styles/vendor/bootstrap-reboot.css">
-  <link rel="stylesheet" href="../styles/vendor/animsition.min.css">
+  <title>スタッフ紹介 | 医院テンプレート</title>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/vendor/bootstrap-reboot.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/vendor/animsition.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/style.css" />
 </head>
 
 <body>
-  <div class="treatment-wrapper animsition">
+  <div class="staff-wrapper animsition">
     <header id="header" class="p-header">
       <div class="logo">
         <a class="animsition-link" href="/">
-          <img src="/images/common/riv_logo_official2.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/riv_logo_official2.png" alt="">
         </a>
       </div>
       <!-- /.logo -->
@@ -27,19 +31,19 @@
         <nav class="pc-nav">
           <ul class="pc-nav__list">
             <li class="pc-nav__item">
-              <a class="animsition-link" href="/first/first.html">初めての方へ</a>
+              <a class="animsition-link" href="<?php echo esc_url( home_url('/first')); ?>">初めての方へ</a>
             </li>
             <li class="pc-nav__item">
-              <a class="animsition-link" href="/treatment/treatment.html">診療について</a>
+              <a class="animsition-link" href="<?php echo esc_url( home_url('/treatment')); ?>">診療について</a>
             </li>
             <li class="pc-nav__item">
-              <a class="animsition-link" href="/staff/staff.html">スタッフ紹介</a>
+              <a class="animsition-link" href="<?php echo esc_url( home_url('/staff')); ?>">スタッフ紹介</a>
             </li>
             <li class="pc-nav__item">
-              <a class="animsition-link" href="/faq/faq.html">よくあるご質問</a>
+              <a class="animsition-link" href="<?php echo esc_url( home_url('/faq')); ?>">よくあるご質問</a>
             </li>
             <li class="pc-nav__item">
-              <a class="animsition-link" href="/recruit/recruit.html">採用情報</a>
+              <a class="animsition-link" href="<?php echo esc_url( home_url('/recruit')); ?>">採用情報</a>
             </li>
           </ul>
         </nav>
@@ -58,117 +62,116 @@
       <!-- /.l-action-sp__buttons -->
     </header>
     <!-- /.p-header -->
-    <div class="treatment-contents">
+    <div class="staff-contents">
       <div id="c-topview" class="c-topview">
         <div class="c-topview__inner">
           <div class="c-topview__img">
-            <img src="/images/home/medical__2.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/reception@pc.jpg" alt="">
           </div>
-          <h2 class="c-topview__title clip-js1 left">
-            診療について
+          <h2 class="st-topview__title clip-js1 left">
+            スタッフ紹介
           </h2>
         </div>
       </div>
       <div class="l-content" id="content">
         <div class="c-container">
-          <div class="tr-message">
-            <div class="tr-message__inner appear up">
+          <div class="st-message">
+            <div class="st-message__inner appear up">
               <h2 class="c-head01 item">
-                <span>RivRound医院の診療コンセプト</span>
-                <p>“患者様の納得”のための、<br class="view-pc">わかりやすく明確な治療方針の提示</p>
+                <p>専門性を活かしたチーム医療</p>
               </h2>
-              <div class="c-txtarea01 item">
-                <p class="c-txt-sm">
-                  ざっと診察して薬を処方するのではなく、今の症状がなぜ起きているのかを分かりやすく患者様にお伝えをし、症状がよくなった後も出来るかぎり再発しないように予防策を丁寧にお伝えしていきます。
-                </p>
-                <p class="c-txt-sm">その場しのぎの治療ではなく、しっかりとご自身の健康に向き合いメインテナンスをしていく。</p>
-                <p class="c-txt-sm">それが私たちが当たり前に取り組む予防医療です。</p>
-              </div>
-            </div>
-            <div class="tr-message__photo">
-              <img src="/images/home/counseling-2.jpg" alt="">
-              <img src="/images/home/counseling.jpg" alt="">
-            </div>
-          </div>
-          <!-- /tr-message -->
-          <div class="tr-menu">
-            <div class="tr-menu__inner appear up">
-              <h2 class="c-head01 item">
-                <span>RivRound医院の診療科目</span>
-                <p>あらゆるお悩みに<br class="view-pc">
-                  幅広くお答えするために</p>
-              </h2>
-              <div class="c-txtarea01 item">
-                <p class="c-txt-sm">
-                  RivRound医院では、患者さんの病状や生活背景に合わせて柔軟に対応すべく、幅広く治療法をご用意しております。また、当院で対応できないような、より専門性の高い処置についても、高次医療機関（大学病院など）と連携をとりながら診療していきます。
-                </p>
-              </div>
-              <ul class="tr-menu__list item">
-                <li><span>一般内科</span></li>
-                <li><span>予防接種</span></li>
-                <li><span>循環器内科</span></li>
-                <li><span>各種検診</span></li>
-              </ul>
-              <div class="c-txtarea01 item">
-                <p class="c-txt-sm">
-                  どんなに良い治療を施したとしても、それを維持する方法を知らない、あるいは実践しなければいずれ不具合が生じてしまいます。治療の繰り返しにならないよう、予防を軸とした診療の流れに沿って治療を進めていきます。
-                </p>
+              <div class="st-message__text item">
+                <p class="c-txt-sm">RivRound医院では、スタッフがそれぞれの専門性を活かすことで、最適な医療をご提供いたします。</p>
               </div>
             </div>
           </div>
-          <!-- /tr-menu -->
-          <div class="tr-machine">
-            <ul class="tr-machine__list">
-              <li class="tr-machine__item">
-                <img src="/images/home/ct.jpg" alt="">
-                <h5 class="c-txt-sm">CT検査</h5>
-                <p class="c-txt-sm">レントゲンよりもより詳細な情報が得られる、みみ・はな用のCT検査を予約なしに10分程度の短時間で行うことができます。</p>
-              </li>
-              <li class="tr-machine__item">
-                <img src="/images/home/img-point2@2x.jpg" alt="">
-                <h5 class="c-txt-sm">内視鏡検査</h5>
-                <p class="c-txt-sm">刺激の少ない径3.3㎜の細いファイバースコープと異物摘出や
-                  組織検査も可能な鉗子付きファイバースコープの両方を導入しています</p>
-              </li>
-              <li class="tr-machine__item">
-                <img src="/images/home/img-point3@2x.jpg" alt="">
-                <h5 class="c-txt-sm">聴力検査</h5>
-                <p class="c-txt-sm">防音構造の聴力検査室でより正確な聴力検査が可能です。</p>
-              </li>
-              <li class="tr-machine__item">
-                <img src="/images/home/img-point4@2x.jpg" alt="">
-                <h5 class="c-txt-sm">赤外線CCDカメラ</h5>
-                <p class="c-txt-sm">めまいの際に出現する『眼振』という異常な眼球運動を画像で確認することができます。</p>
-              </li>
-            </ul>
+          <!-- /st-message -->
+          <div class="st-staff">
+            <div class="st-staff__inner appear up">
+              <div class="heading-group item">
+                <h2 class="heading-en">DOCTOR</h2>
+                <h3 class="heading-normal">医師</h3>
+              </div>
+              <div class="st-staff__block item">
+                <figure class="doctor__photo staff__photo"><img src="<?php echo get_template_directory_uri(); ?>/images/home/staff__1@sp.jpg"></figure>
+                <div class="st-staff__profile">
+                  <div class="st-staff__name">
+                    <h3>院長</h3>
+                    <h4>利部 翔太</h4>
+                  </div>
+                  <div class="st-staff__item">
+                    <h5>出身</h5>
+                    <p>福岡県福岡市</p>
+                  </div>
+                  <div class="st-staff__item">
+                    <h5>担当</h5>
+                    <p>一般治療全般</p>
+                  </div>
+                  <div class="st-staff__item">
+                    <h5>経歴</h5>
+                    <ul>
+                      <li>東京医科大学歯学部歯学科卒業</li>
+                      <li>東京医科大学歯学部付属病院インプラント科</li>
+                      <li>医療法人RivRoundセンター勤務</li>
+                    </ul>
+                  </div>
+                  <div class="st-staff__item">
+                    <h5>資格</h5>
+                    <ul>
+                      <li>日本耳鼻咽喉科学会認定専門医</li>
+                      <li>日本耳鼻咽喉科学会補聴器相談医</li>
+                      <li>厚生労働省認定補聴器適合判定医</li>
+                      <li>身体障害者福祉法15条指定医</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="heading-group item">
+                <h2 class="heading-en">STAFF</h2>
+                <h3 class="heading-normal">スタッフ</h3>
+              </div>
+              <div class="st-staff__block item">
+                <figure class="doctor__photo staff__photo"><img src="<?php echo get_template_directory_uri(); ?>/images/home/staff__2@sp.jpg"></figure>
+                <div class="st-staff__profile">
+                  <div class="st-staff__name">
+                    <h3>看護師</h3>
+                    <h4>利部 美紀</h4>
+                  </div>
+                  <div class="st-staff__item">
+                    <h5>出身</h5>
+                    <p>福岡県北九州市</p>
+                  </div>
+                  <div class="st-staff__item">
+                    <h5>経歴</h5>
+                    <p>福岡大学看護科</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <nav class="btn-category appear up">
             <ul class="item">
-              <li><a class="animsition-link" href="/first/first.html"><span
-                    class="btn-category__first"></span><i>初めての方へ</i></a></li>
-              <li><a class="animsition-link" href="/treatment/treatment.html"><span
-                    class="btn-category__care"></span><i>診療について</i></a></li>
-              <li><a class="animsition-link" href="/staff/staff.html"><span
-                    class="btn-category__staff"></span><i>スタッフ紹介</i></a></li>
-              <li class="u-hidden-pc"><a class="animsition-link" href="/faq/faq.html"><span
-                    class="btn-category__faq"></span><i>よくあるご質問</i></a>
+              <li><a href="<?php echo esc_url( home_url('/first')); ?>"><span class="btn-category__first"></span><i>初めての方へ</i></a></li>
+              <li><a href="<?php echo esc_url( home_url('/treatment')); ?>"><span class="btn-category__care"></span><i>診療について</i></a></li>
+              <li><a href="<?php echo esc_url( home_url('/staff')); ?>"><span class="btn-category__staff"></span><i>スタッフ紹介</i></a></li>
+              <li class="u-hidden-pc"><a href="<?php echo esc_url( home_url('/faq')); ?>"><span class="btn-category__faq"></span><i>よくあるご質問</i></a>
               </li>
             </ul>
           </nav>
           <nav class="btn-topicpath">
             <ul>
-              <li><a class="animsition-link" href="/">TOP</a></li>
-              <li>診療について</li>
+              <li><a href="/">TOP</a></li>
+              <li>スタッフ紹介</li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
-    <!-- /.treatment-contents -->
+    <!-- ./staff-contents -->
     <footer class="p-footer">
       <div class="p-footer__label">
         <h2 class="p-footer__logo">
-          <img src="/images/common/riv_logo_official2.png" />
+          <img src="<?php echo get_template_directory_uri(); ?>/images/common/riv_logo_official2.png" />
         </h2>
         <p class="p-footer__subject">
           一般内科 / 予防接種 / 耳鼻咽喉科 / 各種検診
@@ -273,12 +276,12 @@
       <!-- /.p-open-time -->
       <nav class="p-footer__nav">
         <ul>
-          <li><a href="/first/first.html" class="animsition-link m-button-arrow-l">初めての方へ</a></li>
-          <li><a href="/treatment/treatment.html" class="animsition-link m-button-arrow-l">診療について</a></li>
-          <li><a href="/staff/staff.html" class="animsition-link m-button-arrow-l">スタッフ紹介</a></li>
-          <li><a href="/faq/faq.html" class="animsition-link m-button-arrow-l">よくあるご質問</a></li>
-          <li><a href="/news/news.html" class="animsition-link m-button-arrow-l">お知らせ</a></li>
-          <li><a href="/recruit/recruit.html" class="animsition-link m-button-arrow-l">採用情報</a></li>
+          <li><a href="<?php echo esc_url( home_url('/first')); ?>" class="animsition-link m-button-arrow-l">初めての方へ</a></li>
+          <li><a href="<?php echo esc_url( home_url('/treatment')); ?>" class="animsition-link m-button-arrow-l">診療について</a></li>
+          <li><a href="<?php echo esc_url( home_url('/staff')); ?>" class="animsition-link m-button-arrow-l">スタッフ紹介</a></li>
+          <li><a href="<?php echo esc_url( home_url('/faq')); ?>" class="animsition-link m-button-arrow-l">よくあるご質問</a></li>
+          <li><a href=" <?php echo esc_url( home_url('/news')); ?>" class="animsition-link m-button-arrow-l">お知らせ</a></li>
+          <li><a href="<?php echo esc_url( home_url('/recruit')); ?>" class="animsition-link m-button-arrow-l">採用情報</a></li>
         </ul>
       </nav>
       <div class="p-footer__copyright">
@@ -290,12 +293,12 @@
       <div class="l-menu-sp__inner">
         <nav class="l-menu-sp__nav">
           <ul>
-            <li><a class="animsition-link" href="/first/first.html">初めての方へ</a></li>
-            <li><a class="animsition-link" href="/treatment/treatment.html">診療について</a></li>
-            <li><a class="animsition-link" href="/staff/staff.html">スタッフ紹介</a></li>
-            <li><a class="animsition-link" href="/faq/faq.html">よくあるご質問</a></li>
-            <li><a class="animsition-link" href="/news/news.html">お知らせ</a></li>
-            <li><a class="animsition-link" href="/recruit/recruit.html">採用情報</a></li>
+            <li><a class="animsition-link" href="<?php echo esc_url( home_url('/first')); ?>">初めての方へ</a></li>
+            <li><a class="animsition-link" href="<?php echo esc_url( home_url('/treatment')); ?>">診療について</a></li>
+            <li><a class="animsition-link" href="<?php echo esc_url( home_url('/staff')); ?>">スタッフ紹介</a></li>
+            <li><a class="animsition-link" href="<?php echo esc_url( home_url('/faq')); ?>">よくあるご質問</a></li>
+            <li><a class="animsition-link" href=" <?php echo esc_url( home_url('/news')); ?>">お知らせ</a></li>
+            <li><a class="animsition-link" href="<?php echo esc_url( home_url('/recruit')); ?>">採用情報</a></li>
           </ul>
           <div class="reserve-btn-wrap">
             <div class="reserve-btn-tel">
@@ -316,18 +319,16 @@
     </div>
     <!-- /.l-menu-sp -->
   </div>
-  <!-- /.treatment-wrapper -->
+  <!-- /.staff-wrapper -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="../scripts/vendor/animsition.min.js"></script>
-  <script src="../scripts/vendor/simpleParallax.min.js"></script>
-  <script src="../scripts/libs/scroll-btn.js"></script>
-  <script src="/scripts/libs/page.js"></script>
-  <script src="../scripts/libs/scroll.js"></script>
-  <script src="../scripts/libs/text-animation.js"></script>
-  <script src="../scripts/libs/parallax.js"></script>
-  <script src="../scripts/libs/mobile-menu.js"></script>
-  <script src="../scripts/libs/date.js"></script>
-  <script src="../scripts/c-main.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/vendor/animsition.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/libs/scroll-btn.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/libs/page.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/libs/scroll.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/libs/text-animation.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/libs/mobile-menu.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/libs/date.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/c-main.js"></script>
 </body>
 
 </html>
